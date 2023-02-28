@@ -54,6 +54,7 @@ class _AllSearchState extends State<AllSearch> {
                               borderRadius: BorderRadius.circular(50),
                               borderSide: const BorderSide(
                                   width: 0, style: BorderStyle.none)),
+                          contentPadding: EdgeInsets.symmetric(vertical: 1.0),
                         ),
                       ),
                     ),
@@ -65,7 +66,7 @@ class _AllSearchState extends State<AllSearch> {
                           MaterialPageRoute(
                               builder: (context) => FilterView()));
                     },
-                    icon: Image.asset('assets/button.png'),
+                    icon: Image.asset('assets/button/filter.png'),
                     iconSize: 40,
                   ),
                 ],
@@ -76,7 +77,9 @@ class _AllSearchState extends State<AllSearch> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Content(),
+              child: Content(
+                newsList: [],
+              ),
             ),
           ],
         )),

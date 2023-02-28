@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:ucare/app/modules/Barview/profil.dart';
+import 'package:ucare/app/modules/Fitur/courir.dart';
+import 'package:ucare/app/modules/Fitur/detileorder.dart';
+import 'package:ucare/app/modules/bottombar/bottombar.dart';
 
 class OrderView extends StatefulWidget {
   const OrderView({Key? key}) : super(key: key);
@@ -24,7 +28,10 @@ class _OrderViewState extends State<OrderView> {
                   children: <Widget>[
                     IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BottomBar()));
                       },
                       icon: Image.asset('assets/button.png'),
                       iconSize: 40,
@@ -64,17 +71,14 @@ class _OrderViewState extends State<OrderView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[300],
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                  child: Icon(
-                                    Icons.check_box_outlined,
-                                    color: Colors.grey[700],
-                                  ),
-                                ),
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[300],
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                    child: Image.asset(
+                                        'assets/button/confirm.png')),
                                 const SizedBox(
                                   height: 5.0,
                                 ),
@@ -92,17 +96,14 @@ class _OrderViewState extends State<OrderView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[300],
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                  child: Icon(
-                                    Icons.card_travel,
-                                    color: Colors.grey[700],
-                                  ),
-                                ),
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[300],
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                    child: Image.asset(
+                                        'assets/button/process.png')),
                                 const SizedBox(
                                   height: 5.0,
                                 ),
@@ -120,17 +121,14 @@ class _OrderViewState extends State<OrderView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[300],
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                  child: Icon(
-                                    Icons.delivery_dining,
-                                    color: Colors.grey[700],
-                                  ),
-                                ),
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[300],
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                    child: Image.asset(
+                                        'assets/button/deliver.png')),
                                 const SizedBox(
                                   height: 5.0,
                                 ),
@@ -148,17 +146,14 @@ class _OrderViewState extends State<OrderView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey[800],
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                  child: Icon(
-                                    Icons.done_all_sharp,
-                                    color: Colors.grey[100],
-                                  ),
-                                ),
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[800],
+                                      borderRadius: BorderRadius.circular(5.0),
+                                    ),
+                                    child: Image.asset(
+                                        'assets/button/finish.png')),
                                 const SizedBox(
                                   height: 5.0,
                                 ),
@@ -189,6 +184,12 @@ class _OrderViewState extends State<OrderView> {
                   ),
                   child: Center(
                     child: ListTile(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetileOrderView()));
+                      },
                       leading: Container(
                         decoration: BoxDecoration(
                           color: Colors.grey[400],
@@ -218,7 +219,12 @@ class _OrderViewState extends State<OrderView> {
                           width: 100,
                           height: 35,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BottomBar()));
+                            },
                             child: Center(child: Text('Shop Now')),
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xff333333),
@@ -276,7 +282,12 @@ class _OrderViewState extends State<OrderView> {
                           width: 100,
                           height: 35,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CourirView()));
+                            },
                             child: Center(child: Text('Rate')),
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xff333333),

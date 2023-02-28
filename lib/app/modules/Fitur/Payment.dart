@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:ucare/app/modules/Fitur/order.dart';
 import 'package:ucare/app/modules/bottombar/bottombar.dart';
 
 class PaymentView extends StatefulWidget {
@@ -83,7 +84,7 @@ class _PaymentViewState extends State<PaymentView> {
                       style: const TextStyle(fontWeight: FontWeight.w500),
                     ),
                     Image.asset(
-                      'assets/button/ucare.png',
+                      'assets/bsi.png',
                       width: 50,
                     ),
                   ],
@@ -151,7 +152,10 @@ class _PaymentViewState extends State<PaymentView> {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BottomBar()));
                         },
                         child: Text(
                           'Buy again',
@@ -180,7 +184,7 @@ class _PaymentViewState extends State<PaymentView> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => BottomBar()));
+                                  builder: (context) => OrderView()));
                         },
                         child: Center(
                           child: Text(

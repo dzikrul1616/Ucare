@@ -45,7 +45,7 @@ class _BottomBarState extends State<BottomBar> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Image.asset('assets/home1.png'),
+            icon: Image.asset('assets/button/home1.png'),
             activeIcon: Image.asset('assets/home.png'),
             label: 'Home',
           ),

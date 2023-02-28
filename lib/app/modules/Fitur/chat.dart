@@ -23,7 +23,8 @@ class _ChatRoomState extends State<ChatRoom> {
                   initialValue: "Thankyou very much",
                   decoration: InputDecoration(
                     prefixIcon: InkWell(
-                        onTap: () {}, child: Icon(Icons.insert_photo_outlined)),
+                        onTap: () {},
+                        child: Image.asset('assets/button/file.png')),
                     labelText: 'Write messege...',
                     labelStyle: TextStyle(
                       color: Color(0xffBDBDBD),
@@ -42,7 +43,7 @@ class _ChatRoomState extends State<ChatRoom> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Image.asset('assets/button.png'),
+                icon: Image.asset('assets/button/send.png'),
                 iconSize: 40,
               ),
             ],
@@ -67,9 +68,25 @@ class _ChatRoomState extends State<ChatRoom> {
                         ),
                         Expanded(
                           child: ListTile(
-                            leading: CircleAvatar(
-                              radius: 20.0,
-                              child: Image.asset('assets/barang/barang1.png'),
+                            leading: Stack(
+                              children: [
+                                CircleAvatar(
+                                  radius: 20.0,
+                                  child:
+                                      Image.asset('assets/barang/barang1.png'),
+                                ),
+                                Positioned(
+                                    top: 29,
+                                    left: 27,
+                                    child: Container(
+                                      height: 10,
+                                      width: 10,
+                                      decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    )),
+                              ],
                             ),
                             title: Text(
                               "Kaleeb Store",
@@ -87,7 +104,7 @@ class _ChatRoomState extends State<ChatRoom> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          icon: Image.asset('assets/button.png'),
+                          icon: Image.asset('assets/button/setting.png'),
                           iconSize: 40,
                         ),
                       ],

@@ -106,7 +106,7 @@ class _CartViewState extends State<HomeView1> {
                   const SizedBox(
                     height: 20.0,
                   ),
-                  Content(),
+                  Content(newsList: [])
                 ],
               ),
             ),
@@ -116,4 +116,3 @@ class _CartViewState extends State<HomeView1> {
     );
   }
 }
-

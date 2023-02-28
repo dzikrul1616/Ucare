@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:ucare/app/modules/Fitur/DetileORder.dart';
+import 'package:ucare/app/data/cart.dart';
+
 import 'package:ucare/app/modules/Fitur/Payment.dart';
+import 'package:ucare/app/modules/Fitur/PaymentMethod.dart';
 import 'package:ucare/app/modules/Fitur/changeprofil.dart';
+import 'package:ucare/app/modules/Fitur/courir.dart';
 import 'package:ucare/app/modules/Fitur/order.dart';
 import 'package:ucare/app/modules/auth/views/auth_view.dart';
+import 'package:ucare/app/modules/dynamic/content.dart';
 import 'package:ucare/app/modules/login%20and%20register/views/login_view.dart';
 
 class ProfilView extends StatefulWidget {
@@ -100,7 +104,7 @@ class _CartViewState extends State<ProfilView> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.task),
+                              Image.asset('assets/order.png'),
                               const SizedBox(
                                 width: 15.0,
                               ),
@@ -134,7 +138,7 @@ class _CartViewState extends State<ProfilView> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.maps_ugc),
+                              Image.asset('assets/barang/addres.png'),
                               const SizedBox(
                                 width: 15.0,
                               ),
@@ -163,7 +167,7 @@ class _CartViewState extends State<ProfilView> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PaymentView()));
+                              builder: (context) => PaymentMethod()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width,
@@ -173,7 +177,7 @@ class _CartViewState extends State<ProfilView> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.task),
+                              Image.asset('assets/pay.png'),
                               const SizedBox(
                                 width: 15.0,
                               ),
@@ -198,12 +202,7 @@ class _CartViewState extends State<ProfilView> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DetileOrder()));
-                    },
+                    onTap: () {},
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: 60,
@@ -212,7 +211,7 @@ class _CartViewState extends State<ProfilView> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.task),
+                              Image.asset('assets/voucher.png'),
                               const SizedBox(
                                 width: 15.0,
                               ),
@@ -251,7 +250,7 @@ class _CartViewState extends State<ProfilView> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.task),
+                              Image.asset('assets/barang/uil_setting.png'),
                               const SizedBox(
                                 width: 15.0,
                               ),

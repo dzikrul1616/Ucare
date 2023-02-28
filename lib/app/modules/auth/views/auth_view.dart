@@ -20,70 +20,78 @@ class AuthView extends GetView<AuthController> {
                 image: DecorationImage(
                     image: AssetImage('assets/bg.png'), fit: BoxFit.cover)),
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 35.0, right: 35, top: 150),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset('assets/logoText.png'),
-                  const SizedBox(
-                    height: 200,
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LoginView()));
-                      },
-                      child: Text(
-                        'Sign In',
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff333333)),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xffffffff),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
+          SingleChildScrollView(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 35.0, right: 35, top: 150),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 80.0,
+                    ),
+                    Image.asset('assets/logoText.png'),
+                    const SizedBox(
+                      height: 200,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginView()));
+                        },
+                        child: Text(
+                          'Sign In',
+                          style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff333333)),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Color(0xffffffff),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => RegisterView()));
-                      },
-                      child: Text(
-                        'Sign Up',
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff333333)),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xffEFFFF2),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RegisterView()));
+                        },
+                        child: Text(
+                          'Sign Up',
+                          style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff333333)),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Color(0xffEFFFF2),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 100.0,
+                    ),
+                  ],
+                ),
               ),
             ),
           )
